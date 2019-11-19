@@ -16,7 +16,7 @@ pipeline {
             }
         stage('Deploy') {
             steps {
-                sh 'docker push msobanjo/simple-project:latest'
+                sh 'docker push msobanjo/docker/simple-project:latest'
             }
         }
     }
