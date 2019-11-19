@@ -16,7 +16,7 @@ pipeline {
             }
         stage('Deploy') {
             steps {
-                echo "hi"
+                sh 'docker push msobanjo/simple-project:latest'
             }
         }
     }
