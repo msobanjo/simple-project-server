@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn package -DskipTests'
+                sh 'docker build -t="msobanjo/docker/simple-project:latest" .'
                 }
             }
         stage('Deploy') {
