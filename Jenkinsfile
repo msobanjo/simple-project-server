@@ -9,10 +9,12 @@ pipeline {
             }
         stage('Build') {
             steps {
+                echo "hello"
                 }
             }
         stage('Deploy') {
             steps {
+                echo "hi"
             }
         }
     }
