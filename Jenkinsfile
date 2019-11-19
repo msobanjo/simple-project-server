@@ -1,20 +1,20 @@
-    pipeline {
-        agent any    
-        stages {
-            stage('Test') {
-                steps {
-                  sh 'mvn test Dtest=ControllerAndServiceSuite'
+pipeline {
+    agent any
+
+    stages {
+        stage('Testing Environment') {
+            steps {
+                    sh 'mvn test -Dtest=ControllerAndServiceSuite'
                 }
             }
-            stage('Build') {
-                steps {
-                    echo "Build"
+        stage('Build') {
+            steps {
                 }
             }
-            stage('Deploy') {
-           steps {
-    	echo "Deploy"
-       	}
-           }
-       }
+        stage('Deploy') {
+            steps {
+            }
+        }
+    }
 }
+
