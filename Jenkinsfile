@@ -10,7 +10,7 @@ pipeline {
             }
         stage('Build') {
             steps {
-                echo "hello"
+                sh 'mvn package -DshipTests'
                 }
             }
         stage('Deploy') {
