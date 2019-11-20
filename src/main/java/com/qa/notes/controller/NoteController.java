@@ -30,7 +30,7 @@ public class NoteController {
 	
 	@Autowired
 	private NoteService service;
-       /*
+       
 	@RequestMapping(path = "note/", method = {RequestMethod.GET})
 	@ResponseStatus(code = HttpStatus.OK)
 	public List<NoteDto> getNotes(){
@@ -48,7 +48,7 @@ public class NoteController {
 	public NoteDto updateNote(@RequestBody NoteDto note) throws NotFoundException{
 		return service.updateNote(note);
 	}
-	*/
+	
 	@RequestMapping(path = "note/{id}", method = {RequestMethod.DELETE})
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	public NoteDto deleteNote(@PathVariable Long id) throws NotFoundException{
