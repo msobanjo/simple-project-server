@@ -16,14 +16,14 @@ pipeline {
                 }
             }
         stage('Build') {
-            steps {
+            stepsi {
                 sh 'mvn package -DskipTests'
-                sh 'docker build -t="msobanjo/simple-project:latest" .'
+                sh 'docker build -t="msobanjo/simple-project:${VERSION}" .'
                 }
             }
         stage('Deploy') {
             steps {
-                sh 'docker push msobanjo/simple-project:latest'
+                sh 'docker push msobanjo/simple-project:${VERSION}'
             }
         }
          stage('Testing Environment') {
